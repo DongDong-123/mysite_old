@@ -4,6 +4,6 @@ from news import viewsnews
 
 urlpatterns = [
     path('news/', viewsnews.index, name='newsindex'),
-    path('news/list/(?P<tid>[0-9]+)', viewsnews.list, name='list'),
+    path('news/lists/(\?P<tid>[0-9]+)', viewsnews.lists, name='list'),
 
 ]
