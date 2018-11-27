@@ -105,6 +105,7 @@ class IndexView(ListView):
         return data
 
 
+
 # 分类
 class CategoryView(IndexView):
 
@@ -177,6 +178,12 @@ class PostDetialView(DetailView):
 def search(request):
     find = request.GET.get('find')
     error_msg = ''
+
+    def get_visit_num_data(self,*args):
+        if request.META.get('visit_num'):
+            print('ok')
+        else:
+            print('false')
 
     if not find:
         error_msg = '请输入关键字'
